@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Interfaz Web</title>
+    <meta charset="utf-8">
+    <link href="imagenes/favicon.png" rel="icon">      
+    <link href="css/index.css" rel="stylesheet">    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
+</head>  
+
+<body>
+
+    <section class="bannerweb configform2">
+
+        <!-- Formulario de acceso -->
+        <form id="loginForm">
+            <fieldset>
+                <legend><h3 class="color1">Identificación</h3></legend>
+                <div class="centrado">      
+                  <div class="login bajar">
+                    <img src="imagenes/lapa.png" alt="Logo" width="100">
+                  </div>
+                    <div class="centrado bajar2">
+                        <label for="in-txt-user">Usuario</label>
+                        <input class="form-control" id="in-txt-user" type="text" placeholder="Ingrese su usuario">
+                    </div>
+                    <div class="centrado bajar2">
+                        <label for="in-txt-pass">Contraseña</label>
+                        <input class="form-control" id="in-txt-pass" type="password" placeholder="Ingrese su contraseña">
+                    </div>          
+                    <div class="centrado bajar2">
+                        <button type="submit" class="botones">Entrar</button>
+                    </div>
+                </div>     
+            </fieldset>
+        </form>
+    </section>
+    
+    <!-- JavaScript para la validación -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Usuario y clave correctos
+            const usuarioCorrecto = "cenfo";
+            const contraseñaCorrecta = "123";
+
+            // Obtener valores ingresados
+            const usuarioIngresado = document.getElementById("in-txt-user").value;
+            const contraseñaIngresada = document.getElementById("in-txt-pass").value;
+
+            // Validar credenciales
+            if (usuarioIngresado === usuarioCorrecto && contraseñaIngresada === contraseñaCorrecta) {
+                Swal.fire({
+                    title: "¡Acceso correcto!",
+                    text: "Bienvenido, " + usuarioCorrecto,
+                    icon: "success",
+                    timer: 2000,
+                    showConfirmButton: false
+                }).then(() => {
+                    window.location.href = "inicio.html"; // Redirige si es correcto
+                });
+            } else {
+                Swal.fire({
+                    title: "Error",
+                    text: "Usuario o contraseña incorrectos",
+                    icon: "error",
+                    confirmButtonText: "Intentar de nuevo"
+                });
+            }
+        });
+    </script>
+
+    <!-- Librerías externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+
+</body>
+</html>
+
