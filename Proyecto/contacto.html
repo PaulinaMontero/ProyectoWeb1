@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Fundación Vuela Libre - Contacto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/favicon.png">    
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/contacto.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head> 
+<body>
+  <!-- Encabezado principal -->
+  <header class="header-main">
+    <div class="header-container">
+      <!-- Logo y nombre de la fundación -->
+      <div class="logo-container">
+        <a href="landing.html" title="Inicio">
+          <i class="fas fa-dove logo-icon"></i>
+          <h3 class="logo-text">Fundación Vuela Libre</h3>
+        </a>
+      </div>
+      
+      <!-- Menú de navegación -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="landing.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ayudar.html">Cómo Ayudar</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="mapa-impacto.html">Mapa de Impacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+
+
+<!-- Contenido principal -->
+<main class="main-content">
+  <!-- Sección de información de contacto -->
+  <section class="contact-info-section">
+    <div class="info-container">
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Dirección</h3>
+        <p>Av. Central, Calle 15</p>
+        <p>San José, Costa Rica</p>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h3>Teléfono</h3>
+        <p>+506 2222-3333</p>
+        <p>Lun - Vie: 8:00 - 17:00</p>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Correo Electrónico</h3>
+        <p>info@vuelalibre.org</p>
+        <p>soporte@vuelalibre.org</p>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Redes Sociales</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Birds.Lovers.1" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/ContextBirds" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/chilean_birds/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@BirderKing" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de formulario de contacto con el formato del ejemplo -->
+  <section class="contact-form-section">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Formulario de contacto</h2>
+        <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+      </div>
+      
+      <form method="post" id="form1" class="contact-form">
+        <div class="form-group">
+          <label for="nombreTxt">Nombre:</label>
+          <input id="nombreTxt" name="nombre" type="text" placeholder="Escriba su nombre completo" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="apellidoTxt">Apellidos:</label>
+          <input id="apellidoTxt" name="apellidos" type="text" placeholder="Escriba sus apellidos completos" required/>
+        </div>
+        
+        <div class="form-group">
+          <label for="emailTxt">Email:</label>
+          <input id="emailTxt" name="correo" type="email" placeholder="Formato del email: nombre@dominio.com" required/>
+        </div>
+        
+        <div class="form-group">
+          <label for="numberTxt">Teléfono:</label>
+          <input id="numberTxt" name="telefono" type="text" placeholder="Escriba su celular" required/>
+        </div>
+        
+        <div class="form-group">
+          <label for="mensajeTxt">Mensaje:</label>
+          <textarea id="mensajeTxt" name="comentarios" placeholder="Escriba su mensaje" rows="10" required></textarea>
+        </div>
+        
+
+        <!-- resultado del mensaje enviado JS -->
+        <p class="mensaje-alerta" id="mensajeAlert"></p>
+        
+        <div class="form-actions">
+          <input type="submit" value="Enviar" class="botones" id="btnSend">
+          <button type="reset" class="botones-alt">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+   <!-- Footer centrado -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Columna izquierda: Logo y descripción -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <i class="fas fa-dove"></i>
+        <h3>Fundación Vuela Libre</h3>
+      </div>
+      <p>Protegiendo el hábitat de las aves y promoviendo la conservación de la biodiversidad en Costa Rica desde 2018.</p>
+    </div>
+    
+    <!-- Columna central: Información de contacto -->
+    <div class="footer-contact">
+      <p><i class="fas fa-envelope"></i> info@vuelalibre.org</p>
+      <p><i class="fas fa-phone"></i> (506) 2222-3333</p>
+      <p><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</p>
+      <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 - 17:00</p>
+    </div>
+    
+    <!-- Columna derecha: Redes sociales -->
+    <div class="footer-social">
+      <a href="https://www.facebook.com/Birds.Lovers.1" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chilean_birds/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/ContextBirds" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@BirderKing" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="footer-divider"></div>
+  
+
+  <!-- Copyright centrado -->
+  <div class="footer-copyright">
+    &copy; 2025 Fundación Vuela Libre - Todos los derechos reservados
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- LIBRERIA EMAIL.JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- PROGRAMACION FORM JS -->
+  <script src="js/contacto.js"></script>
+
+</body>
+</html>

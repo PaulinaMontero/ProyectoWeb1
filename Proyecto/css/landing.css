@@ -1,0 +1,271 @@
+/* CSS específico para landing.html */
+
+/* Banner principal */
+.bannerweb {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: none;
+  box-shadow: none;
+}
+
+/* Helpers de posicionamiento */
+.centrado {
+  text-align: center;
+}
+
+.bajar1 {
+  margin-bottom: 20px;
+}
+
+.bajar2 {
+  margin-top: 40px;
+}
+
+/* Tipografía y animaciones */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease forwards;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #16a749;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* Contenedor principal */
+.main-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Icono de ave en el contenedor principal */
+.main-container::before {
+  content: "\f535";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 40px;
+  color: #16a749;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Secciones específicas de Landing */
+.intro-section, .carousel-section, .cta-section {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 30px 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.intro-section h2, .carousel-section h2 {
+  color: #16a749;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.intro-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #333;
+}
+
+/* Carrusel */
+.carousel-main-image {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-title {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #16a749;
+  text-align: center;
+}
+
+.carousel-title a {
+  color: #16a749;
+  text-decoration: none;
+}
+
+.carousel-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #16a749;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #0c8033;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(12, 128, 51, 0.3);
+}
+
+/* Sección CTA */
+.cta-section {
+  text-align: left;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.cta-section h2 {
+  color: #16a749;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.cta-section .botones {
+  position: absolute;
+  right: 50px;
+  bottom: 15px;
+}
+
+/* Encabezado con video */
+.video-header {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 24px; }
+  .main-container { padding: 25px; }
+  .botones {
+      padding: 10px 25px;
+      font-size: 15px;
+  }
+  .bannerweb { height: 60vh; }
+  .video-header { height: 350px; }
+  .intro-section, .carousel-section, .cta-section {
+      padding: 25px;
+  }
+  .cta-section {
+    text-align: left;
+    position: relative;
+    padding-bottom: 60px; 
+  }
+}
+
+.cta-section p {
+  margin-bottom: 40px; 
+}
+
+@media (max-width: 768px) {
+  .cta-section p {
+    margin-bottom: 30px; 
+  }
+  
+  .cta-section .botones {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}

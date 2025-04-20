@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Fundación Vuela Libre - Cómo Ayudar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/favicon.png">    
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/ayudar.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>  
+<body>
+  <!-- Encabezado principal -->
+  <header class="header-main">
+    <div class="header-container">
+      <!-- Logo y nombre de la fundación -->
+      <div class="logo-container">
+        <a href="landing.html" title="Inicio">
+          <i class="fas fa-dove logo-icon"></i>
+          <h3 class="logo-text">Fundación Vuela Libre</h3>
+        </a>
+      </div>
+      
+      <!-- Menú de navegación -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="landing.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ayudar.html" class="active">Cómo Ayudar</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="mapa-impacto.html">Mapa de Impacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+
+
+  <!-- Contenido principal -->
+<main class="main-content">
+  <!-- Sección de Introducción -->
+  <section class="intro-section">
+    <h2>Formas de Contribuir a Nuestra Causa</h2>
+    <p>En Fundación Vuela Libre, trabajamos incansablemente para proteger las aves de Costa Rica y preservar sus hábitats naturales. Nuestro trabajo no sería posible sin el apoyo de personas como tú.</p>
+    <p>Existen múltiples maneras en las que puedes contribuir a nuestra misión:</p>
+  </section>
+
+  <!-- Opciones de ayuda -->
+  <section class="help-options">
+    <div class="option-card">
+      <div class="option-icon">
+        <i class="fas fa-hand-holding-heart"></i>
+      </div>
+      <h3>Donaciones</h3>
+      <p>Tu aporte económico nos permite financiar proyectos de conservación, investigación y educación. Puedes realizar donaciones únicas o establecer aportes mensuales.</p>
+    </div>
+
+    <div class="option-card">
+      <div class="option-icon">
+        <i class="fas fa-feather-alt"></i>
+      </div>
+      <h3>Apadrinar Aves</h3>
+      <p>Apadrina una o más aves de especies amenazadas. Tu aporte ayudará directamente a su protección y conservación.</p>
+      <a href="#apadrinar" class="botones">APADRINAR</a>
+    </div>
+
+    <div class="option-card">
+      <div class="option-icon">
+        <i class="fas fa-hands-helping"></i>
+      </div>
+      <h3>Voluntariado</h3>
+      <p>Únete a nuestro equipo de voluntarios. Ayúdanos en la protección de hábitats, monitoreo de especies, y educación ambiental, para nosotros vos sos importante.</p>
+    </div>
+
+    <div class="option-card">
+      <div class="option-icon">
+        <i class="fas fa-seedling"></i>
+      </div>
+      <h3>Restauración de Hábitats</h3>
+      <p>Participa en nuestras jornadas de reforestación y restauración de ecosistemas que son cruciales para muchas especies de aves.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Apadrinamiento - NUEVO -->
+  <section id="apadrinar" class="sponsor-section">
+    <div class="sponsor-header">
+      <h2>Apadrina un Ave</h2>
+      <p>Tu apadrinamiento ayuda directamente a la conservación de especies amenazadas. Selecciona una especie, especifica la cantidad de aves que deseas apadrinar y la ubicación donde se destinará tu aporte.</p>
+    </div>
+
+    <div class="sponsor-calculator">
+      <div class="sponsor-form">
+        <h3>Calcula tu Aporte</h3>
+        
+        <form id="sponsorForm">
+          <div class="form-group">
+            <label for="birdType">Seleccione el tipo de ave:</label>
+            <select id="birdType" class="input-field">
+              <option value="">Seleccione una especie</option>
+              <option value="quetzal">Quetzal</option>
+              <option value="lapazul">Lapa Azul</option>
+              <option value="laparoja">Lapa Roja</option>
+              <option value="tucan">Tucán Pico Iris</option>
+              <option value="colibri">Colibrí</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="birdCount">Cantidad de aves a apadrinar:</label>
+            <input type="number" id="birdCount" min="1" class="input-field" placeholder="Ingrese la cantidad">
+          </div>
+
+          <div class="form-group">
+            <label for="location">Ubicación del proyecto:</label>
+            <select id="location" class="input-field">
+              <option value="">Seleccione la ubicación</option>
+              <option value="monteverde">Reserva Monteverde</option>
+              <option value="tortuguero">Parque Nacional Tortuguero</option>
+              <option value="corcovado">Parque Nacional Corcovado</option>
+              <option value="talamanca">Cordillera de Talamanca</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="botones" onclick="calcularApadrinamiento()">Calcular Aporte</button>
+            <button type="button" class="botones-alt" onclick="limpiarFormulario()">Limpiar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="sponsor-result">
+        <h3>Detalles de tu Apadrinamiento</h3>
+        <div class="result-details">
+          <div class="result-item">
+            <span class="result-label">Especie:</span>
+            <span id="resultSpecies" class="result-value">-</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Cantidad:</span>
+            <span id="resultCount" class="result-value">-</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Ubicación:</span>
+            <span id="resultLocation" class="result-value">-</span>
+          </div>
+          <div class="result-total">
+            <span class="result-label">Aporte Total:</span>
+            <span id="resultTotal" class="result-value">₡0</span>
+          </div>
+        </div>
+        <div class="sponsor-action">
+          <button type="button" class="botones" id="confirmBtn" disabled>Confirmar Apadrinamiento</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-info">
+      <h3>Beneficios de Apadrinar</h3>
+      <ul>
+        <li>Recibirás un certificado de apadrinamiento personalizado.</li>
+        <li>Actualizaciones periódicas sobre los proyectos de conservación.</li>
+        <li>Invitaciones a eventos exclusivos de observación de aves.</li>
+        <li>Tu nombre aparecerá en nuestro "Muro de Conservacionistas".</li>
+      </ul>
+    </div>
+  </section>
+
+
+</main>
+
+   <!-- Footer centrado -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Columna izquierda: Logo y descripción -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <i class="fas fa-dove"></i>
+        <h3>Fundación Vuela Libre</h3>
+      </div>
+      <p>Protegiendo el hábitat de las aves y promoviendo la conservación de la biodiversidad en Costa Rica desde 2018.</p>
+    </div>
+    
+    <!-- Columna central: Información de contacto -->
+    <div class="footer-contact">
+      <p><i class="fas fa-envelope"></i> info@vuelalibre.org</p>
+      <p><i class="fas fa-phone"></i> (506) 2222-3333</p>
+      <p><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</p>
+      <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 - 17:00</p>
+    </div>
+    
+    <!-- Columna derecha: Redes sociales -->
+    <div class="footer-social">
+      <a href="https://www.facebook.com/Birds.Lovers.1" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chilean_birds/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/ContextBirds" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@BirderKing" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="footer-divider"></div>
+  
+
+  <!-- Copyright centrado -->
+  <div class="footer-copyright">
+    &copy; 2025 Fundación Vuela Libre - Todos los derechos reservados
+  </div>
+</footer>
+
+  <script src="js/apadrinar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Fundacion Vuela Libre - Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="imagenes/favicon.png" rel="icon">      
+    <link href="css/login.css" rel="stylesheet">
+    <!-- Font Awesome para el icono de ave -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>  
+
+  <body>
+    <section class="bannerweb">
+      <div class="configform1">
+        <!-- Icono de ave en lugar del logo -->
+        <div class="logo-container">
+          <!-- Opción 1: Usar Font Awesome -->
+          <i class="fas fa-dove bird-icon"></i>
+          
+          <!-- Opción 2: Usar CSS puro (descomenta esta línea y comenta la anterior) -->
+          <!-- <div class="bird-css-icon"></div> -->
+        </div>
+        
+        <h3>Iniciar sesión</h3>
+        <p class="subtitle">para continuar a Fundacion Vuela Libre</p>
+        
+        <form method="post">
+          <div class="form-group">
+            <label for="in-txt-user">Usuario:</label>
+            <input class="form-control" id="in-txt-user" type="text" placeholder="Ingrese su usuario">
+          </div>
+          
+          <div class="form-group">
+            <label for="in-txt-pass">Contraseña:</label>
+            <input class="form-control" id="in-txt-pass" type="password" placeholder="Ingrese su contraseña">
+          </div>
+          
+          <div class="button-container">
+            <button type="button" class="botones" id="btn-login">Iniciar</button>
+            <button type="button" class="botones" onclick="limpiar()">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+  </body>
+</html>
