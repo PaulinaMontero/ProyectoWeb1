@@ -1,0 +1,247 @@
+.about-section,
+.mission-vision-section,
+.partners-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Historia */
+.section-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.section-icon {
+  font-size: 50px;
+  color: #16a749;
+  min-width: 80px;
+  text-align: center;
+}
+
+.section-content h2 {
+  color: #16a749;
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Mision y Vision */
+.dual-container {
+  display: flex;
+  gap: 30px;
+}
+
+.mission-box,
+.vision-box {
+  flex: 1;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.mission-box {
+  background-color: rgba(22, 167, 73, 0.1);
+}
+
+.vision-box {
+  background-color: rgba(22, 167, 73, 0.05);
+}
+
+.icon-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-header i {
+  font-size: 30px;
+  color: #16a749;
+  margin-right: 15px;
+}
+
+.icon-header h2 {
+  color: #16a749;
+  margin: 0;
+}
+
+
+.partners-section h2 {
+  color: #16a749;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.partners-section h2:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #16a749;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.partner {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.partner-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+.partner h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.partner p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dual-container {
+    flex-direction: column;
+  }
+  
+  .partners-container,
+  .team-container {
+    justify-content: center;
+  }
+  
+  .partner,
+  .team-member {
+    min-width: 100%;
+  }
+}
+
+
+.menu-selector {
+    max-width: 1100px;
+    margin: 20px auto 30px;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .mt-3 {
+    margin-top: 10px;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .formato1 {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #16a749;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    width: 250px;
+  }
+  
+  .formato1:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(22, 167, 73, 0.5);
+  }
+  
+  .centrado {
+    text-align: center;
+  }
+
+  /* video */
+.video-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .video-container h2 {
+    color: #16a749;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  
+  .video-container h2:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #16a749;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .responsive-video {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; 
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+
+  @media (max-width: 768px) {
+    .responsive-video {
+      padding-top: 75%; 
+      max-width: 100%;
+    }
+  }
