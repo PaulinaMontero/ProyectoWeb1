@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaVida - Ofertas Especiales</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            Envío gratis en compras mayores a $500 | Horario: Lunes a Domingo 8:00 - 22:00
+        </div>
+        <div class="logo-container">
+            <div class="logo">
+                <span>🏥</span> FarmaVida
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="ofertas.html" class="active">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Buscar productos..." id="searchInput">
+                <button class="search-btn" onclick="searchProducts()">Buscar</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Ofertas Especiales</h1>
+            <p>Descubre nuestras promociones exclusivas y aprovecha los mejores precios en productos seleccionados.</p>
+        </section>
+        
+        <section class="section" id="ofertas">
+            <h2 class="section-title">Ofertas y Descuentos</h2>
+            
+            <div class="deals">
+                <div class="deals-grid" id="dealsGrid">
+                    <!-- Las ofertas se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>FarmaVida</h3>
+                <p>Tu farmacia de confianza, comprometida con la salud y el bienestar de nuestros clientes desde 2010.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📸</a>
+                    <a href="#" class="social-link">👥</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Productos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Medicamentos</a></li>
+                    <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado Personal</a></li>
+                    <li><a href="#">Primeros Auxilios</a></li>
+                    <li><a href="#">Bebés</a></li>
+                    <li><a href="#">Equipos Médicos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Boletín Informativo</h3>
+                <p>Suscríbete para recibir noticias sobre ofertas especiales y nuevos productos.</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
+                    <button class="newsletter-btn">✉️</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 FarmaVida. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
