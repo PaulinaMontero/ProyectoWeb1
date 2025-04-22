@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Fundacion Vuela Libre - Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/favicon.png">    
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>  
+<body>
+  <!-- Encabezado principal -->
+  <header class="header-main">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="landing.html" title="Inicio">
+          <i class="fas fa-dove logo-icon"></i>
+          <h3 class="logo-text">Fundacion Vuela Libre</h3>
+        </a>
+      </div>
+      
+      <!-- Menu de navegacion -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="landing.html" class="active">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="ayudar.html">Como Ayudar</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="mapa-impacto.html">Mapa de Impacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+<header class="video-header">
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="videos/video1.mp4" type="video/mp4">
+    </video>
+  </div>
+</header>
+  
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <div class="intro-section">
+      <h2>Protegiendo Nuestras Aves en Costa Rica</h2>
+      <p>
+        Fundacion Vuela Libre es una organizacion dedicada a la conservacion y proteccion de las aves 
+        en Costa Rica. Desde nuestra creacion, trabajamos incansablemente para preservar los habitats 
+        naturales, rescatar especies en peligro y educar a las comunidades sobre la importancia de 
+        nuestra biodiversidad aviar única.
+      </p>
+      <p>
+        Con más de 900 especies de aves que habitan o migran a traves de nuestro pais, Costa Rica 
+        alberga una de las poblaciones de aves mas diversas del planeta. Nuestra mision es garantizar 
+        que estas magnificas criaturas continuen volando libres para las generaciones futuras.
+      </p>
+    </div>
+
+<!-- Carrusel de Fotografías -->
+<div class="carousel-section">
+  <div class="carousel-container">
+    <h2>Galeria de Aves</h2>
+    <img src="" name="thumb" class="carousel-main-image">
+    <div class="carousel-title">
+      <a href="#" id="titulo">Fotografias</a>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" onclick="cambiar(-1)">Anterior</button>
+      <button class="carousel-btn" onclick="cambiar(1)">Siguiente</button>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Ayudanos a hacer la diferencia</h2>
+  <p>
+    Cada contribucion, grande o pequeña, ayuda a nuestros esfuerzos de conservacion.
+    Descubre cómo puedes involucrarte y ser parte del cambio.
+  </p>
+  <a href="ayudar.html" class="botones">COMO AYUDAR</a>
+</div>
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <i class="fas fa-dove"></i>
+        <h3>Fundacion Vuela Libre</h3>
+      </div>
+      <p>Protegiendo el habitat de las aves y promoviendo la conservación de la biodiversidad en Costa Rica desde 2018.</p>
+    </div>
+    
+
+    <div class="footer-contact">
+      <p><i class="fas fa-envelope"></i> info@vuelalibre.org</p>
+      <p><i class="fas fa-phone"></i> (506) 2222-3333</p>
+      <p><i class="fas fa-map-marker-alt"></i> San Jose, Costa Rica</p>
+      <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 - 17:00</p>
+    </div>
+    
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/Birds.Lovers.1" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/chilean_birds/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/ContextBirds" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@BirderKing" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  
+
+
+  <div class="footer-copyright">
+    &copy; 2025 Fundación Vuela Libre - Todos los derechos reservados
+  </div>
+</footer>
+
+
+  <script>
+
+    let micarrusel = {};
+    let foto = 0;
+    let total = 0;
+
+
+    micarrusel = [
+      { imageurl: "imagenes/ave1.png", titulo: "Quetzal - Ave Emblemática" },
+      { imageurl: "imagenes/ave2.png", titulo: "Tucán - Bosques Tropicales" },
+      { imageurl: "imagenes/ave3.png", titulo: "Colibrí - Polinizadores Vitales" },
+      { imageurl: "imagenes/ave4.png", titulo: "Lapa Roja - En Peligro de Extinción" },
+      { imageurl: "imagenes/ave5.png", titulo: "Yigüirro - Ave Nacional" }
+    ];
+
+    //Función que permite cambiar las imágenes (anterior y siguiente)
+    let cambiar = function(mas) {
+      //Almacena la cantidad total de imágenes
+      total = micarrusel.length;
+      //Almacena la próxima foto
+      foto = foto + mas;
+      //Condicionales para determinar la imagen a presentar
+      if (foto > total - 1) {
+        foto = 0;
+      }
+      if (foto < 0) {
+        //Tiene la cantidad total de imágenes
+        foto = total - 1;
+      }
+
+      //Instrucciones que apuntan a cada imagen y título
+      //Permite apuntar al arreglo de las fotos con la ruta de cada una
+      document.thumb.src = micarrusel[foto].imageurl;
+      //Asignación del ID título 
+      titulo = document.getElementById('titulo');
+      //Asignación del arreglo para referenciar la foto con el título
+      titulo.innerText = micarrusel[foto].titulo;
+    }
+
+    // Inicializar el carrusel al cargar la página
+    window.onload = function() {
+      cambiar(0); // Muestra la primera imagen al cargar
+    }
+  </script>
+</body>
+</html>
